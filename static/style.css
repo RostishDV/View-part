@@ -1,0 +1,16 @@
+.testText
+{
+	background-color: white;
+	font-style: italic;
+}
+
+.testText:hover 
+{
+	background-color: red;
+}
+
+button
+{
+	background-color: red;
+	font-style: italic;
+}

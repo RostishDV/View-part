@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>post page</title>
+	<link rel="stylesheet" type="text/css" href="style.css">
+	<script language="JavaScript">
+var citys = ['Moscow', 'London', 'New-York', 'LossSantos'];
+
+
+function getRandomInRange(min, max) {
+  return Math.floor(Math.random() * (max - min + 1)) + min;
+}
+
+function setParams(){
+	document.getElementById("city").value = citys[getRandomInRange(0,3)];
+	document.getElementById("age").value = getRandomInRange(1, 150);
+
+}
+	</script>
+</head>
+<body>
+	<form method="POST" action="http://localhost:8080/post">
+		<p>Введите имя</p>
+		<p><input class="testText" type="text" name="name" id="name"></p>
+		<input type="text" name="city" id="city" hidden="true">
+		<input type="text" name="age" id="age" hidden="true">
+		<script type="text/javascript">
+			setParams();
+		</script>
+		<p><input type="submit" name="send"></p>
+	</form>
+</body>
+</html>
